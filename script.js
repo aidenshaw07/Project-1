@@ -78,18 +78,23 @@ function sequence() {
   gamePattern.push(randomColor);
   console.log(gamePattern);
   turnCounter.innerHTML = gamePattern.length;
-  setTimeout (() => {
-    gamePattern.forEach((color) => {
+  // setTimeout (() => {
+    gamePattern.forEach((color, index) => {
+      console.log(color);
       let patternColor = document.getElementById(`${color}`);
-      let patternColorStyle = patternColor.style.backgroundColor;
+      let patternColorStyle = patternColor.id
       console.log(patternColor);
       console.log(patternColorStyle)
-      patternColor.style.backgroundColor = 'white';
+      // patternColor.style.backgroundColor = 'white';
       setTimeout(() => {
         patternColor.style.backgroundColor = patternColorStyle;
-      }, 200)
-    })
-  }, 400)
+        console.log(`Showing color: ${patternColorStyle}`);
+        setTimeout(()=> {
+          patternColor.style.backgroundColor = null;
+        }, 1000)
+      }, 1000 * index)
+    }) 
+  // }, 1000)
 }
 
 buttons.forEach((button) => {

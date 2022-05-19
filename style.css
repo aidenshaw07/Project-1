@@ -46,7 +46,6 @@ body {
     margin: -250px 0px 0px -250px;
     border-style: solid;
     border-width: 5px;
-    transition-delay: 1s;
   }
   
   .red {
@@ -60,7 +59,6 @@ body {
     margin: -250px 0px 0px 0px;
     border-style: solid;
     border-width: 5px;
-    transition-delay: 1s;
   }
   
   .yellow {
@@ -74,7 +72,6 @@ body {
     margin: 0px -250px 0px -250px;
     border-style: solid;
     border-width: 5px;
-    transition-delay: 1s;
   }
   
   .blue {
@@ -88,7 +85,6 @@ body {
     margin: 0px 0px -250px 0px;
     border-style: solid;
     border-width: 5px;
-    transition-delay: 1s;
   }
   
   #second-circle {
@@ -110,14 +106,14 @@ body {
   }
 
   .tile:hover {
-    /* border-color: white; */
+    border-color: white; 
     /* border: 1px white solid; */
     /* box-shadow: 0 0 50px white; */
   }
 
   .pressed {
-    box-shadow: 0 0 20px white;
-    background: white;
+    box-shadow: 0 0 75px white;
+    /* background: white; */
   }
   
   #start {
@@ -183,11 +179,11 @@ body {
   }
 
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: rgb(0, 255, 0);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px rgb(0, 255, 0);
   }  
 
   input:checked + .slider:before {

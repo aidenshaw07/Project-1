@@ -16,50 +16,10 @@ const bottomLeft = document.querySelector("#yellow");
 onButton.addEventListener("click", (event) => {
   if (onButton.checked === true) {
     turnCounter.innerHTML = "-";
-    // topRight.style.background = "red";
-    // setTimeout(() => {
-    //   topLeft.style.background = "green";
-    // }, 900);
-    // setTimeout(() => {
-    //   bottomRight.style.background = "blue";
-    // }, 300);
-    // setTimeout(() => {
-    //   bottomLeft.style.background = "yellow";
-    // }, 600);
-    // setTimeout(() => {
-    //   topRight.style.background = "darkred";
-    //   topLeft.style.background = "darkgreen";
-    //   bottomRight.style.background = "darkblue";
-    //   bottomLeft.style.background = "#BDB76B";
-    // }, 1200);
-    // setTimeout(() => {
-    //   topRight.style.background = "red";
-    //   topLeft.style.background = "green";
-    //   bottomRight.style.background = "blue";
-    //   bottomLeft.style.background = "yellow";
-    // }, 1700);
-    // setTimeout(() => {
-    //   topRight.style.background = "darkred";
-    //   topLeft.style.background = "darkgreen";
-    //   bottomRight.style.background = "darkblue";
-    //   bottomLeft.style.background = "#BDB76B";
-    // }, 2200);
-    // setTimeout(() => {
-    //   topRight.style.background = "red";
-    //   topLeft.style.background = "green";
-    //   bottomRight.style.background = "blue";
-    //   bottomLeft.style.background = "yellow";
-    // }, 2700);
-    // setTimeout(() => {
-    //   topRight.style.background = "darkred";
-    //   topLeft.style.background = "darkgreen";
-    //   bottomRight.style.background = "darkblue";
-    //   bottomLeft.style.background = "#BDB76B";
-    // }, 3200);
   } else {
     onButton.checked === false;
     turnCounter.innerHTML = "";
-    clearGameBoard()
+    clearGameBoard();
   }
 });
 
@@ -76,25 +36,26 @@ function sequence() {
   let randomNumber = Math.floor(Math.random() * 4);
   let randomColor = colors[randomNumber];
   gamePattern.push(randomColor);
+  // setTimeout (() => {
+  //   if (gamePattern[index] === "blue") one("blue");
+  //   if (gamePattern[index] === "red") one("red");
+  //   if (gamePattern[index] === "yellow") one("yellow");
+  //   if (gamePattern[index] === "green") one("green");
+  // }, 500)
   console.log(gamePattern);
   turnCounter.innerHTML = gamePattern.length;
-  // setTimeout (() => {
-    gamePattern.forEach((color, index) => {
-      console.log(color);
-      let patternColor = document.getElementById(`${color}`);
-      let patternColorStyle = patternColor.id
-      console.log(patternColor);
-      console.log(patternColorStyle)
-      // patternColor.style.backgroundColor = 'white';
+  gamePattern.forEach((color, index) => {
+    let patternColor = document.getElementById(`${color}`);
+    let patternColorStyle = patternColor.id;
+    // patternColor.style.backgroundColor = 'white';
+    setTimeout(() => {
+      patternColor.style.backgroundColor = patternColorStyle;
+      console.log(`Showing color: ${patternColorStyle}`);
       setTimeout(() => {
-        patternColor.style.backgroundColor = patternColorStyle;
-        console.log(`Showing color: ${patternColorStyle}`);
-        setTimeout(()=> {
-          patternColor.style.backgroundColor = null;
-        }, 1000)
-      }, 1000 * index)
-    }) 
-  // }, 1000)
+        patternColor.style.backgroundColor = null
+      }, 1000);
+    }, 1000 * index);
+  });
 }
 
 buttons.forEach((button) => {
@@ -105,8 +66,8 @@ buttons.forEach((button) => {
       checkAnswer(userClickedButton);
       button.classList.add("pressed");
       setTimeout(() => {
-        button.classList.replace("pressed", "panel");
-      }, 200);
+        button.classList.replace("pressed", "tile");
+      }, 150);
     }
   });
 });
@@ -127,10 +88,23 @@ function checkAnswer(color) {
   }
 }
 
-function clearGameBoard () {
+function clearGameBoard() {
   topRight.style.background = "darkred";
   topLeft.style.background = "darkgreen";
-  bottomRight.style.background = "darkblue";      bottomLeft.style.background = "#BDB76B";
-  start = false
-  gamePattern = []
+  bottomRight.style.background = "darkblue";
+  bottomLeft.style.background = "#BDB76B";
+  start = false;
+  gamePattern = [];
 }
+
+// function one (color) {
+//   document.querySelector(`#${color}`).style.background = color
+//   // topRight.style.background = "orange";
+//   // topLeft.style.background = "orange";
+//   // bottomRight.style.background = "orange";
+//   // bottomLeft.style.background = "orange";
+//   // topRight.classList.add("pressed")
+//   // setTimeout(() => {
+//   //   topRight.classList.replace("pressed", "tile");
+//   // }, 200);
+// }

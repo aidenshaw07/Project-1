@@ -1,0 +1,200 @@
+body {
+  background-image: url(asd.jpg);
+  background-size: cover;
+  font-family: 'Kalam', cursive;
+}
+
+#start {
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 110px;
+    margin-left: 95px;
+    cursor: pointer;
+  }
+  
+  #title {
+    position: absolute;
+    font-size: 40px;
+    margin-left: 65px;
+    margin-top: 55px;
+  }
+  
+  #count {
+    position: absolute;
+    border-radius: 50%;
+    background: #330000;
+    color: red;
+    font-size: 25px;
+    height: 30px;
+    width: 60px;
+    margin-left: 90px;
+    margin-top: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+  }
+
+  .green {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px 0 0 0;
+    background: darkgreen;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0px 0px -250px;
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  .red {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 250px 0 0;
+    background: darkred;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0px 0px 0px;
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  .yellow {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 0 250px;
+    background: 	#BDB76B;
+    top: 50%;
+    left: 50%;
+    margin: 0px -250px 0px -250px;
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  .blue {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 250px 0;
+    background: darkblue;
+    top: 50%;
+    left: 50%;
+    margin: 0px 0px -250px 0px;
+    border-style: solid;
+    border-width: 5px;
+  }
+  
+  #second-circle {
+    position: absolute;
+    background: grey;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border-style: double;
+    border-width: 10px;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0px 0px -125px;
+  }
+
+  .inside-text {
+    margin-left: 70px;
+    color: black;
+  }
+
+  .panel:hover {
+    border-color: white;
+    box-shadow: 0 0 50px white;
+  }
+
+  .pressed {
+    box-shadow: 0 0 20px white;
+    background: white;
+  }
+  
+  #start {
+    font-family: 'Kalam', cursive;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgb(255, 255, 255);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+    text-align: center;
+    transition: all 0.2s;
+  }
+  
+  .button:hover {
+    color: green;
+    background-color: rgb(255, 255, 255);
+  }
+
+
+  /* Button Referenced from: https://cssbuttons.app/buttons/3 */
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    margin-left: 95px;
+    width: 60px;
+    height: 34px;
+  }  
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }  
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

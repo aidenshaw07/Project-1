@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simon Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="first-circle">
+      <div type="button" class="tile green" id="green"></div>
+      <div type="button" class="tile red" id="red"></div>
+      <div type="button" class="tile yellow" id="yellow"></div>
+      <div type="button" class="tile blue" id="blue"></div>
+      <div id="second-circle">
+        <div id="count"></div>
+        <div id="title">SIMON</div>
+        <div id="switches">
+          <button class="button" id="start">START</button>
+          <div>
+            <label class="switch">
+              <input type="checkbox" class="toggle" id="on" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+          <span class="inside-text">POWER SWITCH</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

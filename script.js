@@ -75,8 +75,6 @@ function sequence() {
   gamePattern.push(randomColor);
   console.log(gamePattern);
   turnCounter.innerHTML = gamePattern.length;
-  // topLeft.style.backgroundColor = 'white'
-  // [blue, yellow]
   setTimeout (() => {
     gamePattern.forEach((color) => {
       let patternColor = document.getElementById(`${color}`);

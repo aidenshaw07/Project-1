@@ -59,13 +59,16 @@ onButton.addEventListener("click", (event) => {
   } else {
     onButton.checked === false;
     turnCounter.innerHTML = "";
+    clearGameBoard()
   }
 });
 
 startButton.addEventListener("click", (event) => {
   if (onButton.checked === true) {
-    start = true;
-    sequence();
+    if (start === false) {
+      start = true;
+      sequence();
+    }
   }
 });
 
@@ -80,14 +83,14 @@ function sequence() {
       let patternColor = document.getElementById(`${color}`);
       let patternColorStyle = patternColor.style.backgroundColor;
       console.log(patternColor);
+      console.log(patternColorStyle)
       patternColor.style.backgroundColor = 'white';
       setTimeout(() => {
         patternColor.style.backgroundColor = patternColorStyle;
-      }, 500)
+      }, 200)
     })
-  }, 500)
+  }, 400)
 }
-// async and await
 
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -116,6 +119,13 @@ function checkAnswer(color) {
     index = 0;
     gamePattern = [];
     start = false;
-    turnCounter.innerHTML = "-";
   }
+}
+
+function clearGameBoard () {
+  topRight.style.background = "darkred";
+  topLeft.style.background = "darkgreen";
+  bottomRight.style.background = "darkblue";      bottomLeft.style.background = "#BDB76B";
+  start = false
+  gamePattern = []
 }

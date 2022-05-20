@@ -85,6 +85,7 @@ function checkAnswer(color) {
     index = 0;
     gamePattern = [];
     start = false;
+    turnCounter.innerHTML = "END";
   }
 }
 

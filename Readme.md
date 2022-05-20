@@ -3,10 +3,16 @@ The Simon game is the game in which players must repeat random sequences of ligh
 
 ![](Screenshot%20(2).png)
 
+To play the game click the link below
+https://aidenshaw-firstproject-simongame.netlify.app/
+
+
 Technology Used
+    
     HTML
     CSS
     JavaScript
+
 
 Major Hurdles:
 

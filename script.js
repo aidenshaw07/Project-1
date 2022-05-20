@@ -52,7 +52,7 @@ function sequence() {
       patternColor.style.backgroundColor = patternColorStyle;
       console.log(`Showing color: ${patternColorStyle}`);
       setTimeout(() => {
-        patternColor.style.backgroundColor = null
+        patternColor.style.backgroundColor = null;
       }, 1000);
     }, 1000 * index);
   });
@@ -99,12 +99,24 @@ function clearGameBoard() {
 
 // function one (color) {
 //   document.querySelector(`#${color}`).style.background = color
-//   // topRight.style.background = "orange";
-//   // topLeft.style.background = "orange";
-//   // bottomRight.style.background = "orange";
-//   // bottomLeft.style.background = "orange";
-//   // topRight.classList.add("pressed")
-//   // setTimeout(() => {
-//   //   topRight.classList.replace("pressed", "tile");
-//   // }, 200);
+  // topRight.style.background = "orange";
+  // topLeft.style.background = "orange";
+  // bottomRight.style.background = "orange";
+  // bottomLeft.style.background = "orange";
+//   topRight.classList.add("pressed")
+//   setTimeout(() => {
+//     topRight.classList.replace("pressed", "tile");
+//   }, 200);
+//   topLeft.classList.add("pressed")
+//   setTimeout(() => {
+//     topLeft.classList.replace("pressed", "tile");
+//   }, 200);
+//   bottomRight.classList.add("pressed")
+//   setTimeout(() => {
+//     bottomRight.classList.replace("pressed", "tile");
+//   }, 200);
+//   bottomLeft.classList.add("pressed")
+//   setTimeout(() => {
+//     bottomLeft.classList.replace("pressed", "tile");
+//   }, 200);
 // }

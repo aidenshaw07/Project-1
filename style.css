@@ -113,7 +113,7 @@ body {
 
   .pressed {
     box-shadow: 0 0 75px white;
-    /* background: white; */
+    background: white;
   }
   
   #start {
@@ -141,8 +141,7 @@ body {
     background-color: rgb(255, 255, 255);
   }
 
-
-  /* Button Referenced from: https://cssbuttons.app/buttons/3 */
+  /* -------------------------------------------------- */
 
   .switch {
     position: relative;
